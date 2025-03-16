@@ -1,0 +1,422 @@
+@font-face {
+  font-family: "Host Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/HostGrotesk-Regular.ttf") format("" truetype "");
+}
+@font-face {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/NothingYouCouldDo-Regular.ttf") format("" truetype "");
+}
+
+:root {
+  --white-color: rgba(255, 251, 251, 0.816);
+  --black-color: #000000;
+  --background-color: #e5e5e5;
+}
+/* Base */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  background-image: url(/images/_MG_5555_edited.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Host Grotesk", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  background-color: var(--background-color);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+h1 {
+  margin-bottom: 42px;
+  font-size: 56px;
+  font-weight: 300;
+}
+h3 {
+  font-size: 40px;
+  color: var(--white-color);
+  font-weight: 300;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.section {
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+.button {
+  width: 220px;
+  height: 79px;
+  margin-top: 24px;
+  font-size: 24px;
+  background-color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* icon */
+.icon-instagram,
+.icon-telegram {
+  max-width: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon-arrow {
+  max-width: 50px;
+  position: absolute;
+  bottom: -8px;
+  right: 10px;
+}
+.logo {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.icon-instagram:hover,
+.icon-telegram:hover {
+  transform: scale(1.1);
+}
+
+/* Link */
+.link {
+  color: var(--white-color);
+  font-size: 30px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+.link-footer {
+  color: var(--black-color);
+  font-size: 24px;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.all-link {
+  position: relative;
+  color: var(--black-color);
+}
+
+.all-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: var(--black-color);
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+.all-link:hover::after {
+  width: 100%;
+}
+.link-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black-color);
+}
+/* Logo */
+.logo {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.logo:hover {
+  transform: scale(0.9);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+}
+.header-menu {
+  display: flex;
+  gap: 80px;
+}
+
+/* Title section */
+.title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/smog.jpg);
+  background-size: cover;
+  background-position: 0%;
+  background-repeat: no-repeat;
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 468px;
+}
+.title-container p {
+  color: var(--white-color);
+}
+.brand-text {
+  color: var(--white-color);
+}
+
+/* About section */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  max-height: 534px;
+  padding: 30px;
+  background-color: var(--white-color);
+  gap: 129px;
+  overflow: hidden;
+}
+.text-about-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 95px;
+}
+
+.about-img {
+  max-width: 100%;
+  width: 520px;
+  height: 474px;
+}
+
+/* Photography section */
+.photography-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.photography-container {
+  display: flex;
+  justify-content: end;
+  max-width: 1600px;
+  max-height: 534px;
+  width: 100%;
+  background-image: url(/images/smash-building.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.photography-container-content {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  padding-bottom: 290px;
+  max-width: 536px;
+  max-height: 532px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Blog section */
+.blog-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-container {
+  display: flex;
+  justify-content: end;
+  max-width: 1600px;
+  max-height: 534px;
+  width: 100%;
+  background-image: url(/images/barbed-wire.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 210px;
+  max-width: 536px;
+  max-height: 532px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+.about-name {
+  padding-top: 130px;
+  font-style: italic;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--white-color);
+  margin-top: 96px;
+  padding: 50px 160px;
+}
+.footer-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.address-link {
+  color: var(--black-color);
+}
+.social-container {
+  display: flex;
+  gap: 70px;
+  padding-top: 25px;
+}
+.contact-text {
+  color: var(--black-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+.container-footer-buuton {
+  position: absolute;
+  bottom: 10px;
+  right: -70px;
+}
+.footer-button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+.footer-button-a {
+  color: var(--black-color);
+}
+.footer-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: var(--black-color);
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+.footer-button:hover::after {
+  width: 100%;
+}
+.address-link {
+  padding-top: 10px;
+}
+
+/* Photography Page */
+
+/* Blog Page */
+.blog-page-section {
+  padding-top: 100px;
+}
+
+.blog-page-item {
+  display: flex;
+  align-items: stretch;
+  margin-top: 50px;
+  max-width: 1600px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+}
+.blog-img {
+  flex: 1;
+}
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-page-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.blog-text {
+  position: relative;
+  padding: 0 64px;
+  margin: 40px 20px;
+  overflow-y: hidden;
+  flex: 2;
+}
+.blog-title-text {
+  font-size: 24px;
+  font-weight: 700;
+}
+.blog-paragraph {
+  font-size: 20px;
+}
