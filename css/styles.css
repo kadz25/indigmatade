@@ -495,21 +495,31 @@ ul {
     display: none;
   }
   .burger-menu {
+    position: absolute;
+    right: 5px;
+    top: 30px;
     display: flex;
+    z-index: 2000;
   }
   .header-nav.open {
     display: flex;
+    gap: 30px;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 0;
     left: 0;
     width: 100%;
     background-color: #333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     text-align: center;
     z-index: 2000;
   }
   .header-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
   .logo-hidden {
     display: none;
