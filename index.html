@@ -20,16 +20,18 @@
           <nav class="header-nav">
             <ul class="header-menu">
               <li>
-                <a class="link all-link link-active" href="#header">HOME</a>
+                <a class="link all-link link-active" href="#">HOME</a>
               </li>
               <li><a class="link all-link" href="">PORTFOLIO</a></li>
               <li><a class="link all-link" href="">ABOUT</a></li>
             </ul>
-            <a href="index.html"
-              ><svg class="logo" weight="0" height="50">
-                <use href="./images/icons.svg#logo"></use>
-              </svg>
-            </a>
+            <div class="logo-hidden">
+              <a href="index.html"
+                ><svg class="logo" weight="0" height="50">
+                  <use href="./images/icons.svg#logo"></use>
+                </svg>
+              </a>
+            </div>
             <ul class="header-menu">
               <li>
                 <a class="link all-link" href="photography.html">PHOTOGRAPHY</a>
@@ -38,12 +40,24 @@
               <li><a class="link all-link" href="">CONTACT</a></li>
             </ul>
           </nav>
+          <div class="phone-header">
+            <a href="index.html"
+              ><svg class="logo" weight="0" height="50">
+                <use href="./images/icons.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="burger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="title-section section">
+      <section id="title-section" class="title-section section">
         <div class="container">
           <div class="title-container">
             <h1 class="brand-text">Indigmatate</h1>
@@ -154,7 +168,7 @@
 
           <div class="container-footer-buuton">
             <button class="footer-button" type="button">
-              <a class="footer-button-a" href="#header">Back to top ↑</a>
+              <a class="footer-button-a" href="#title-section">Back to top ↑</a>
             </button>
           </div>
         </div>
