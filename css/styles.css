@@ -13,7 +13,7 @@
 }
 
 :root {
-  --white-color: rgba(255, 251, 251, 0.816);
+  --white-color: rgba(255, 251, 251);
   --black-color: #000000;
   --background-color: #e5e5e5;
 }
@@ -213,9 +213,10 @@ ul {
 .burger-menu span {
   width: 25px;
   height: 3px;
-  background-color: white;
+  border-radius: 30px;
+  background-color: var(--black-color);
   margin: 4px 0;
-  transition: transform 0.3s, opacity 0.3s; /* Анимация для бургер-меню */
+  transition: transform 0.5s, opacity 0.1s; /* Анимация для бургер-меню */
 }
 
 /* Стили для бургер-меню в "крестик" при открытии */
@@ -251,7 +252,7 @@ ul {
   color: var(--white-color);
 }
 .brand-text {
-  color: var(--white-color);
+  color: var(--background-color);
 }
 
 /* About section */
@@ -267,10 +268,11 @@ ul {
 }
 .about-content {
   display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
   max-width: 1600px;
-  max-height: 534px;
+  /* max-height: 534px; */
   padding: 30px;
   background-color: var(--white-color);
   gap: 129px;
@@ -283,9 +285,9 @@ ul {
 }
 
 .about-img {
-  max-width: 100%;
-  width: 520px;
-  height: 474px;
+  width: 20%;
+  max-width: 520px;
+  height: 30%;
 }
 .about-name {
   padding-top: 130px;
@@ -509,12 +511,11 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: var(--background-color);
     padding-top: 20px;
     padding-bottom: 20px;
-
     text-align: center;
-    z-index: 2000;
+    z-index: 1500;
   }
   .header-menu {
     display: flex;
@@ -523,5 +524,8 @@ ul {
   }
   .logo-hidden {
     display: none;
+  }
+  .about-content {
+    flex-direction: column;
   }
 }
