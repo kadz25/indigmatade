@@ -550,4 +550,8 @@ ul {
   .gallery img {
     max-width: 15em;
   }
+  .footer-button {
+    right: -90px;
+    bottom: -10px;
+  }
 }
