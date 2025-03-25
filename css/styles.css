@@ -79,6 +79,7 @@ ul {
   height: 79px;
   margin-top: 24px;
   font-size: 24px;
+  color: var(--black-color);
   background-color: var(--white-color);
   border: none;
   cursor: pointer;
