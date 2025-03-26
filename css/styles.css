@@ -510,11 +510,12 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--background-color);
+    background-color: rgba(227, 227, 227, 0.9);
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
     z-index: 1500;
+    padding-bottom: 400%;
   }
   .header-menu {
     display: flex;
