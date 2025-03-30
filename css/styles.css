@@ -88,6 +88,7 @@ ul {
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: 6px;
 }
 .view-more-btn:hover,
 .read-more-btn:hover {
@@ -242,6 +243,23 @@ ul {
   background-size: cover;
   background-position: 0%;
   background-repeat: no-repeat;
+  animation: changeBackground 30s infinite;
+  transition: background-image 5s ease-in-out;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url(../images/smog.jpg);
+  }
+  33% {
+    background-image: url(../images/grama.jpg);
+  }
+  66% {
+    background-image: url(../images/lips.jpg);
+  }
+  100% {
+    background-image: url(../images/smog.jpg);
+  }
 }
 .title-container {
   display: flex;
@@ -255,6 +273,7 @@ ul {
 }
 .brand-text {
   color: var(--background-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* About section */
@@ -289,7 +308,7 @@ ul {
 .about-img {
   width: 10em;
   max-width: 520px;
-  /* height: 15em; */
+  border-radius: 8px;
 }
 .about-name {
   padding-top: 130px;
