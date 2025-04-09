@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <title>Indigmatate</title>
   </head>
   <body>
@@ -37,7 +38,7 @@
                 <a class="link all-link" href="photography.html">PHOTOGRAPHY</a>
               </li>
               <li><a class="link all-link" href="blog.html">BLOG</a></li>
-              <li><a class="link all-link" href="">CONTACT</a></li>
+              <li><a class="link all-link" href="#footer">CONTACT</a></li>
             </ul>
           </nav>
           <div class="phone-header">
@@ -57,7 +58,20 @@
     </header>
 
     <main>
-      <section id="title-section" class="title-section section">
+      <section
+        data-aos="fade-in"
+        id="title-section"
+        class="title-section section"
+      >
+        <div class="slides">
+          <div class="slide active"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+        </div>
+        <div class="overlay">
+          <button class="overlay-prev" id="prev">&#10094;</button>
+          <button class="overlay-next" id="next">&#10095;</button>
+        </div>
         <div class="container">
           <div class="title-container">
             <h1 class="brand-text">Indigmatate</h1>
@@ -65,7 +79,7 @@
           </div>
         </div>
       </section>
-      <section class="about-section section">
+      <section data-aos="fade-in" class="about-section section">
         <div class="container">
           <div class="about-container">
             <h1>About</h1>
@@ -89,7 +103,7 @@
           </div>
         </div>
       </section>
-      <section class="photography-section section">
+      <section data-aos="fade-in" class="photography-section section">
         <div class="container">
           <div class="photography-container">
             <h1>Photography</h1>
@@ -105,7 +119,7 @@
           </div>
         </div>
       </section>
-      <section class="blog-section section">
+      <section data-aos="fade-in" class="blog-section section">
         <div class="container">
           <div class="blog-container">
             <h1>Blog</h1>
@@ -122,7 +136,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer-container">
           <a href="index.html"
@@ -179,5 +193,9 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

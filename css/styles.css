@@ -235,45 +235,78 @@ ul {
   transform: translateY(-11px) rotate(-45deg);
 }
 /* Title section */
-.title-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../images/smog.jpg);
-  background-size: cover;
-  background-position: 0%;
-  background-repeat: no-repeat;
-  animation: changeBackground 30s infinite;
-  transition: background-image 5s ease-in-out;
+#title-section {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
 }
 
-@keyframes changeBackground {
-  0% {
-    background-image: url(../images/smog.jpg);
-  }
-  33% {
-    background-image: url(../images/grama.jpg);
-  }
-  66% {
-    background-image: url(../images/lips.jpg);
-  }
-  100% {
-    background-image: url(../images/smog.jpg);
-  }
+#title-section .slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
-.title-container {
+
+#title-section .slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#title-section .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Кнопки */
+#title-section .overlay {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 468px;
+  right: 4px;
+  justify-content: space-between;
+  padding: 0 30px;
+  transform: translateY(-50%);
+  z-index: 3;
 }
-.title-container p {
+
+#title-section .overlay button {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Текст */
+#title-section .title-container {
+  position: relative;
+  z-index: 2;
   color: var(--white-color);
+  text-align: center;
+  top: 490px;
+  margin: 0 auto;
 }
-.brand-text {
-  color: var(--background-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+#title-section .title-container h1 {
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+
+#title-section .title-container p {
+  font-size: 20px;
 }
 
 /* About section */
