@@ -259,7 +259,7 @@ ul {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 1s ease-in-out;
 }
 
 #title-section .slide.active {
@@ -308,7 +308,29 @@ ul {
 #title-section .title-container p {
   font-size: 20px;
 }
+#title-section .slide-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
 
+#title-section .slide-indicators .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#title-section .slide-indicators .dot.active {
+  background: var(--background-color);
+  border-radius: 2px;
+}
 /* About section */
 .about-section {
   display: flex;

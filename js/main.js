@@ -58,3 +58,29 @@ document.getElementById("next").addEventListener("click", nextSlide);
 document.getElementById("prev").addEventListener("click", prevSlide);
 
 setInterval(nextSlide, 5000);
+
+const indicatorsContainer = document.getElementById("indicators");
+
+// Генерируем индикаторы
+images.forEach((_, i) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  if (i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => goToSlide(i));
+  indicatorsContainer.appendChild(dot);
+});
+
+function updateIndicators() {
+  document.querySelectorAll(".dot").forEach((dot, index) => {
+    dot.classList.toggle("active", index === current);
+  });
+}
+
+// Обновим функцию смены слайда:
+function goToSlide(index) {
+  slides[current].classList.remove("active");
+  current = index;
+  slides[current].style.backgroundImage = images[current];
+  slides[current].classList.add("active");
+  updateIndicators();
+}
