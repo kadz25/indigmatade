@@ -319,6 +319,8 @@ ul {
 }
 
 #title-section .slide-indicators .dot {
+  position: relative;
+  top: 10px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
