@@ -690,16 +690,18 @@ ul {
   font-style: italic;
   margin-top: 10px;
 }
+.post-image img {
+  max-width: 300px;
+}
 .content-img {
-  max-width: 200px;
+  max-width: 2500px;
   padding: 20px;
   width: 100%;
   height: auto;
-  border: 2px solid #333; /* Тёмная рамка */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
+  border-radius: 30px;
 }
 .post-content.open {
-  max-height: 1000px;
+  max-height: 2000px;
 }
 
 /* типографика */
