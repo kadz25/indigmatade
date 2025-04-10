@@ -12,6 +12,22 @@
   src: url("/fonts/NothingYouCouldDo-Regular.ttf") format("" truetype "");
 }
 
+@font-face {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  src: url(/fonts/Merriweather-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/fonts/PlayfairDisplay-Regular.ttf);
+}
 :root {
   --white-color: rgba(255, 251, 251);
   --black-color: #000000;
@@ -572,59 +588,138 @@ ul {
 }
 
 /* Blog Page */
+
 .blog-page-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 120px;
+  padding: 120px 20px;
+  color: #111;
 }
+
+.blog-page-section h1 {
+  font-family: "Host Grotesk", sans-serif;
+  font-size: 56px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 .blog-post {
-  margin-bottom: 60px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  background-color: var(--white-color);
+  background-color: #fefefe;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 900px;
+  margin: 0 auto;
 }
-.post-title {
-  font-size: 100px;
-}
-.blog-img {
-  display: flex;
-  align-items: center;
-  max-width: 800px;
-  width: 100%;
-}
-.blog-img img {
-  border-radius: 20px;
-  max-width: 400px;
-  width: 100%;
-  height: 100%;
-}
+
 .post-header {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  gap: 15px;
-}
-.post-text {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-  padding: 20px;
+  gap: 20px;
+  position: relative;
 }
 
+.blog-img img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.post-text {
+  flex: 1;
+  text-align: center;
+}
+.post-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0;
+  color: #222;
+  letter-spacing: 0.3px;
+}
+.post-subtitle {
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+  line-height: 1.4;
+}
 .toggle-btn {
+  font-size: 24px;
   background: none;
   border: none;
-  font-size: 30px;
   cursor: pointer;
-  color: gray;
+  transition: transform 0.3s ease;
 }
 
+.toggle-btn.open {
+  transform: rotate(180deg);
+}
+
+/* cкрытое по умолчанию содержимое */
 .post-content {
+  display: grid;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.6s ease;
+  font-family: "Merriweather", serif;
+  margin-top: 20px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.post-content {
+  column-count: 2;
+  column-gap: 30px;
+}
+
+.post-content img {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.post-image {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+.post-image figcaption {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+}
+.content-img {
+  max-width: 200px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #333; /* Тёмная рамка */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
+}
+.post-content.open {
+  max-height: 1000px;
+}
+
+/* типографика */
+.post-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.post-content p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.post-content blockquote {
+  font-style: italic;
+  margin: 20px 0;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+  color: #555;
 }
 @media screen and (max-width: 768px) {
   /* Header */
@@ -693,7 +788,10 @@ ul {
   }
   /* Blog page */
   .post-title {
-    font-size: 50px;
+    font-size: 50 px;
+  }
+  .blog-page-section h1 {
+    font-size: 32px;
   }
   /* Footer */
   .footer-link-list {

@@ -25,7 +25,7 @@ document.querySelectorAll(".toggle-btn").forEach((button) => {
 
 // смена фото главной секции
 const images = [
-  "url(images/gray-building.jpg)",
+  "url(images/cans-in-the-window.jpg)",
   "url(images/smog.jpg)",
   "url(images/metro-shadow.jpg)",
   "url(images/szpiegowo-building.jpg)",

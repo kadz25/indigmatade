@@ -11,10 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <title>Indigmatate</title>
   </head>
-  <body>
+  <body class="body-blog">
     <header class="header" id="header">
       <div class="container">
         <div class="header-container">
@@ -65,39 +71,82 @@
                 <img src="./images/szpiegowo-building.jpg" alt="" />
               </div>
               <div class="post-text">
-                <h2 class="post-title">Комплекс «Szpiegowo»</h2>
-              </div>
-              <button class="toggle-btn">&#x25BC;</button>
-              <!-- Стрелочка вниз -->
-            </div>
-            <div class="post-content">
-              <p>Полное описание поста.</p>
-            </div>
-          </div>
-          <!-- <div class="blog-post">
-            <div class="post-header">
-              <div class="blog-img">
-                <img src="./images/szpiegowo-building.jpg" alt="" />
-              </div>
-              <div class="post-text">
-                <h2>Комплекс «Szpiegowo»</h2>
-                <p>
-                  Комплекс «Szpiegowo» у Варшаві (вул. Jana III Sobieskiego
-                  100), зведений у 1977–1978 роках для співробітників посольства
-                  СРСР, після розпаду Союзу занепав і залишався покинутим. У
-                  2022 році міська влада взяла його під контроль, посилаючись на
-                  порушення Росією угоди про обмін земельними ділянками.
+                <h2 class="post-title">Комплекс «Шпигово»</h2>
+                <p class="post-subtitle">
+                  Радянська архітектура серед польських вулиць
                 </p>
               </div>
               <button class="toggle-btn">&#x25BC;</button>
-          
             </div>
             <div class="post-content">
-              <p>Полное описание поста.</p>
+              <h2>Час, простір і руїни</h2>
+
+              <p>
+                Варшава — не просто столиця. Це місто-шар пам’яті, де фасади
+                говорять більше, ніж підручники. Комплекс «Шпигово» — один із
+                тих об’єктів, які мовчать, але ти відчуваєш: вони бачили більше,
+                ніж нам дозволено знати.
+              </p>
+
+              <blockquote>
+                «Тиша будівель говорить гучніше, ніж протести на площах».
+              </blockquote>
+
+              <p>
+                Радянська епоха залишила по собі не лише бетон і параною. Вона
+                залишила будівлі, в яких відлунюють голоси з минулого. «Шпигово»
+                — це колишній житловий комплекс для працівників радянських
+                спецслужб. Закритий, відокремлений, майже стертий з карти.
+              </p>
+
+              <p>
+                Сьогодні вікна комплексу дивляться в нікуди. Скло давно вибите,
+                але тіні залишились. Можливо, тому кожен, хто проходить повз, на
+                мить сповільнюється — наче щось шепоче зсередини.
+              </p>
+
+              <p>
+                Архітектура як археологія параної. Місце, де бетон бере на себе
+                роль оповідача. І лише тиша знає, чим усе закінчилось.
+              </p>
+              <figure class="post-image">
+                <img
+                  class="content-img"
+                  src="/images/szpiegowo-building.jpg"
+                  alt=""
+                />
+                <figcaption>
+                  Фотографія комплексу «Шпигово» в контексті тиші та пам'яті.
+                </figcaption>
+              </figure>
+              <p>
+                Варшава — не просто столиця. Це місто-шар пам’яті, де фасади
+                говорять більше, ніж підручники. Комплекс «Шпигово» — один із
+                тих об’єктів, які мовчать, але ти відчуваєш: вони бачили більше,
+                ніж нам дозволено знати.
+              </p>
+
+              <blockquote>
+                «Тиша будівель говорить гучніше, ніж протести на площах».
+              </blockquote>
+              <figure class="post-image">
+                <img
+                  class="content-img"
+                  src="/images/szpiegowo-building.jpg"
+                  alt=""
+                />
+                <figcaption>
+                  Фотографія комплексу «Шпигово» в контексті тиші та пам'яті.
+                </figcaption>
+              </figure>
+
+              <p>
+                <small class="post-meta">4 квітня 2025 • Варшава</small>
+              </p>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </main>
     <footer class="footer">
       <div class="footer-container">
@@ -118,18 +167,23 @@
               <a
                 class="all-link"
                 class="address-link"
-                href="mailto:aastapenko11@gmail.com"
-                >Email: aastapenko11@gmail.com</a
+                href="mailto:indigmatate@gmail.com"
+                >Email: indigmatate@gmail.com</a
               >
             </li>
           </ul>
           <div class="social-container">
-            <svg class="icon-instagram" weight="0" height="50">
-              <use href="./images/icons.svg#instagram"></use>
-            </svg>
-            <svg class="icon-telegram" weight="0" height="50">
-              <use href="./images/icons.svg#telegram"></use>
-            </svg>
+            <a href="https://www.instagram.com/indigmatate/">
+              <svg class="icon-instagram" weight="0" height="50">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+
+            <a href="https://t.me/smkgn">
+              <svg class="icon-telegram" weight="0" height="50">
+                <use href="./images/icons.svg#telegram"></use>
+              </svg>
+            </a>
           </div>
         </div>
         <ul class="footer-link-list">
