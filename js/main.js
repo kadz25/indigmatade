@@ -84,3 +84,27 @@ function goToSlide(index) {
   slides[current].classList.add("active");
   updateIndicators();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Получаем все элементы Lightbox
+  const lightboxImages = document.querySelectorAll('[data-lightbox="gallery"]');
+
+  // Проверяем, если на мобильном устройстве
+  if (window.innerWidth <= 768) {
+    lightboxImages.forEach(function (image) {
+      const hammer = new Hammer(image);
+
+      // Обработчик свайпа влево (следующее изображение)
+      hammer.on("swipeleft", function () {
+        const currentLightbox = lightbox.getInstance();
+        currentLightbox.next();
+      });
+
+      // Обработчик свайпа вправо (предыдущее изображение)
+      hammer.on("swiperight", function () {
+        const currentLightbox = lightbox.getInstance();
+        currentLightbox.prev();
+      });
+    });
+  }
+});
