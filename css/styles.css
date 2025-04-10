@@ -291,7 +291,7 @@ ul {
 }
 
 /* Текст */
-#title-section .title-container {
+.title-container {
   position: relative;
   z-index: 2;
   color: var(--white-color);
@@ -300,13 +300,19 @@ ul {
   margin: 0 auto;
 }
 
-#title-section .title-container h1 {
+.title-container h1 {
+  font-family: "Host Grotesk", sans-serif;
+  font-weight: 700;
   font-size: 40px;
+  text-transform: uppercase;
   margin-bottom: 0.5rem;
+  color: rgba(227, 227, 227, 0.8);
 }
 
-#title-section .title-container p {
+.title-container p {
   font-size: 20px;
+  font-weight: 700;
+  color: rgba(227, 227, 227, 0.8);
 }
 #title-section .slide-indicators {
   position: absolute;
@@ -578,7 +584,9 @@ ul {
   border-radius: 20px;
   background-color: var(--white-color);
 }
-
+.post-title {
+  font-size: 100px;
+}
 .blog-img {
   display: flex;
   align-items: center;
@@ -657,6 +665,16 @@ ul {
   .logo-hidden {
     display: none;
   }
+  /* Text */
+  .title-container {
+    top: 430px;
+  }
+  .title-container h1 {
+    font-size: 30px;
+  }
+  .title-container p {
+    font-size: 10px;
+  }
   /* About section media */
   .about-content {
     flex-direction: column;
@@ -672,6 +690,10 @@ ul {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+  }
+  /* Blog page */
+  .post-title {
+    font-size: 50px;
   }
   /* Footer */
   .footer-link-list {

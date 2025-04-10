@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <title>Indigmatate</title>
   </head>
   <body>
@@ -54,24 +55,17 @@
       </div>
     </header>
 
-    <main>
+    <main data-aos="zoom-in">
       <div class="container">
         <div class="blog-page-section">
-          <h1>Blog</h1>
+          <h1 data-aos="slide-left">Blog</h1>
           <div class="blog-post">
             <div class="post-header">
               <div class="blog-img">
                 <img src="./images/szpiegowo-building.jpg" alt="" />
               </div>
               <div class="post-text">
-                <h2>Комплекс «Szpiegowo»</h2>
-                <p>
-                  Комплекс «Szpiegowo» у Варшаві (вул. Jana III Sobieskiego
-                  100), зведений у 1977–1978 роках для співробітників посольства
-                  СРСР, після розпаду Союзу занепав і залишався покинутим. У
-                  2022 році міська влада взяла його під контроль, посилаючись на
-                  порушення Росією угоди про обмін земельними ділянками.
-                </p>
+                <h2 class="post-title">Комплекс «Szpiegowo»</h2>
               </div>
               <button class="toggle-btn">&#x25BC;</button>
               <!-- Стрелочка вниз -->
@@ -80,7 +74,7 @@
               <p>Полное описание поста.</p>
             </div>
           </div>
-          <div class="blog-post">
+          <!-- <div class="blog-post">
             <div class="post-header">
               <div class="blog-img">
                 <img src="./images/szpiegowo-building.jpg" alt="" />
@@ -96,14 +90,14 @@
                 </p>
               </div>
               <button class="toggle-btn">&#x25BC;</button>
-              <!-- Стрелочка вниз -->
+          
             </div>
             <div class="post-content">
               <p>Полное описание поста.</p>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
     <footer class="footer">
       <div class="footer-container">
@@ -162,5 +156,9 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

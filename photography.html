@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <title>Photography</title>
   </head>
   <body>
@@ -56,9 +57,9 @@
         </div>
       </div>
     </header>
-    <main>
+    <main data-aos="zoom-in">
       <section class="photography-page-section">
-        <h1>Photography</h1>
+        <h1 data-aos="slide-left">Photography</h1>
         <div class="gallery">
           <div class="photo-card">
             <a href="images/barbed-wire.jpg" data-lightbox="mygallery"
@@ -162,4 +163,8 @@
     <script src="/lightbox2-dev/dist/js/lightbox-plus-jquery.min.js"></script>
   </body>
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
